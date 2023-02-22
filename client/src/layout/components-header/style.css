@@ -1,0 +1,117 @@
+/* hamburger box */
+.hamburger-box {
+  margin-top: 20px;
+  display: none;
+}
+/* Burger */
+.hamburger {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger span:first-child {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger span:last-child {
+  bottom: 0;
+}
+
+.hamburger:hover span {
+  background: rgb(67 56 202); 
+}
+
+/* burger and X */
+.hamburgerAndX {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburgerAndX span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburgerAndX span:first-child {
+  top: 0;
+}
+
+.hamburgerAndX span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburgerAndX span:last-child {
+  bottom: 0;
+}
+
+.hamburgerAndX:hover span {
+  background: rgb(240, 115, 115);
+}
+
+.hamburgerAndX:hover span:first-child {
+  transform: rotate(45deg);
+  top: 45%;
+}
+
+.hamburgerAndX:hover span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerAndX:hover span:last-child {
+  transform: rotate(-45deg);
+  bottom: 45%;
+}
+/* Menu links */
+.menu-links{
+  display: flex;
+  gap:20px;
+  margin-top:26px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+ 
+}
+.menu-links a{
+  color:whitesmoke;
+  transition: 0.3s ease-in-out;
+}
+.menu-links a:hover{
+  color:rgb(67 56 202);
+}
+
+/* Responsive */
+@media only screen and (max-width: 800px) {
+  .hamburger-box {
+    margin-top: 20px;
+    display: block;
+  }
+  .menu-links{
+    display: none;
+  }
+}

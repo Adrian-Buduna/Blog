@@ -1,26 +1,35 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 // pages
-import Home from "./pages/Home";
-import Logout from "./pages/Logout";
-import Articles from "./pages/Articles";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-
-
+import {
+  AlertsPage,
+  ErrorPage,
+  HomePage,
+  LoginPage,
+  MyStocksPage,
+  NewsPage,
+  ProfilePage,
+  RegisterPage,
+  SearchPage,
+  TrendsPage,
+  Watchlist,
+} from "./pages";
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/logout" element={<Logout />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/alerts" element={<AlertsPage />} />
+        <Route path="*" element={<ErrorPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/my-stocks" element={<MyStocksPage />} />
+        <Route path="/news" element={<NewsPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/trends" element={<TrendsPage />} />
+        <Route path="/watchlist" element={<Watchlist />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
